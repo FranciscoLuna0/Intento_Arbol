@@ -93,9 +93,29 @@ public:
 			return dato;
 	}
 
+	int altura(nodo *n) {
+		if (n == NULL)
+		{
+			return -1;
+		}
+		else
+		{
+			int AltIzq, AltDer;
+
+			AltDer = altura(n->derecha);
+			AltIzq = altura(n->izquierda);
+
+			if (AltIzq > AltDer)
+				return AltIzq + 1;
+			else
+				return AltDer + 1;
+		}
+	}
+
 private:
 	T dato;
 	nodo<T> *izquierda;
 	nodo<T> *derecha;
+	//int altura;
 };
 

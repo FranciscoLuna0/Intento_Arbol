@@ -25,6 +25,10 @@ int main() {
 	//prueba.postOrder();
 	prueba.preOrder();
 	//prueba.enOrder();
+	
+	int altura = prueba.altura(&prueba);
+	
+	cout << "\n\n\n"<<altura;
 
 
 	cout << "\n\n";
